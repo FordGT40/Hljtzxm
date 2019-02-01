@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
@@ -185,7 +184,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:background="@null"
-
                     android:textColor="#333333"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -220,7 +218,7 @@
                     android:layout_marginLeft="5dp"
                     android:background="@null"
                     android:ellipsize="end"
-android:inputType="phone"
+                    android:inputType="phone"
                     android:singleLine="true"
                     android:textColor="#333333"
                     android:textSize="16sp" />
