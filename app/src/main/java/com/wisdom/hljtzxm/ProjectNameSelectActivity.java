@@ -24,7 +24,7 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.wisdom.hljtzxm.adapter.ProjectListAdapter;
 import com.wisdom.hljtzxm.model.AreaModel;
-import com.wisdom.hljtzxm.model.CityModel;
+import com.wisdom.hljtzxm.model.CityModelConsult;
 import com.wisdom.hljtzxm.model.ProjectListModel;
 import com.wisdom.hljtzxm.model.ProjectListModelWithClass;
 
@@ -136,16 +136,16 @@ public class ProjectNameSelectActivity extends Activity implements View.OnClickL
                 Log.i("123", "onSuccess: " + responseInfo.result);
                 try {
                     JSONObject jsonObject = new JSONObject(responseInfo.result);
-                    List<CityModel> cityList = new Gson().fromJson(jsonObject.getString("results"), new TypeToken<List<CityModel>>() {
+                    List<CityModelConsult> cityList = new Gson().fromJson(jsonObject.getString("results"), new TypeToken<List<CityModelConsult>>() {
                     }.getType());
                     Log.i("123", "lenth: " + cityList.size());
                     List<String> cityNamesList = new ArrayList<>();
-                    for (CityModel model : cityList) {
+                    for (CityModelConsult model : cityList) {
                         cityNamesList.add(model.getArea_name());
                     }
                     spinner_city.setAdapter(new ArrayAdapter<String>(ProjectNameSelectActivity.this,
                             android.R.layout.simple_spinner_item, cityNamesList));
-                    final List<CityModel> finalCityList = cityList;
+                    final List<CityModelConsult> finalCityList = cityList;
                     spinner_city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

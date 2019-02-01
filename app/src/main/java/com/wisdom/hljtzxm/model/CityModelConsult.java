@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @time 2019/1/31 11:23
  * @change
  */
-public class CityModel implements Serializable {
+public class CityModelConsult implements Serializable {
 
     /**
      * area_name : 哈尔滨市
