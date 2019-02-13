@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ConsultMainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +22,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ThingsItemsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ConsultMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".QuestionesActivity"
             android:theme="@style/AppTheme" />
     </application>
 
